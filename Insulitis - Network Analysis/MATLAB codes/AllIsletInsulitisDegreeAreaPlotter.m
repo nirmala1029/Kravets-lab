@@ -64,6 +64,7 @@ for isletno = 1:134 %Update this line with a list of islets to be analyzed
     Op(sno,5) = tcellcount; %Compute the no of T-cells
     Op(sno,6) = bcellcount; %Compute the no of beta-cells
     Op(sno,7) = tcellcount/(bwarea(maskperiph)*scaling*scaling*10^-6); %Compute T-cell density
+    Op(sno,8) = log(Op(sno,7)); %Compute log of T-cell density
 
 end
 
